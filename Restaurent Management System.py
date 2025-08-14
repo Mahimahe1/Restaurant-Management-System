@@ -338,11 +338,9 @@ def Adminarea():
             if not userid.isalnum():
                 print("Invalid user input....")
                 continue
-                
-            userid = int(userid)
 
             for match in data:
-                if match[0]==userid:
+                if str(match[0])==userid:
                     userid=True
 
                     while True:
@@ -631,4 +629,5 @@ local()
 
 con.commit()
 cur.close()
+
 con.close()
